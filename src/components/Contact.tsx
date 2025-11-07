@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mail, Linkedin, MessageCircle } from "lucide-react";
+import { Mail, MessageCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -147,21 +147,6 @@ const Contact = () => {
                 <div>
                   <div className="font-medium text-foreground">WhatsApp</div>
                   <div className="text-sm text-muted-foreground">Quick response guaranteed</div>
-                </div>
-              </a>
-
-              <a
-                href="https://linkedin.com/in/ethanmartin"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 bg-accent rounded-lg hover:bg-primary/10 transition-colors group"
-              >
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20">
-                  <Linkedin className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <div className="font-medium text-foreground">LinkedIn</div>
-                  <div className="text-sm text-muted-foreground">Connect professionally</div>
                 </div>
               </a>
             </div>
