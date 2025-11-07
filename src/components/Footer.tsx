@@ -1,12 +1,7 @@
-import { Linkedin, Instagram, Youtube } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Mail, MessageCircle } from "lucide-react";
 
 const Footer = () => {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <footer className="bg-secondary text-secondary-foreground py-12 px-4 sm:px-6 lg:px-8">
@@ -20,28 +15,18 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="mailto:etsyoptimizerethanmatin@gmail.com"
                 className="w-10 h-10 bg-secondary-foreground/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
               >
-                <Linkedin className="w-5 h-5" />
+                <Mail className="w-5 h-5" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://wa.me/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-secondary-foreground/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
               >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="https://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-secondary-foreground/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
-              >
-                <Youtube className="w-5 h-5" />
+                <MessageCircle className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -51,29 +36,29 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="text-secondary-foreground/80 hover:text-primary transition-colors">
+                <Link to="/" className="text-secondary-foreground/80 hover:text-primary transition-colors">
                   Home
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={() => scrollToSection("about")} className="text-secondary-foreground/80 hover:text-primary transition-colors">
+                <Link to="/about" className="text-secondary-foreground/80 hover:text-primary transition-colors">
                   About
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={() => scrollToSection("services")} className="text-secondary-foreground/80 hover:text-primary transition-colors">
+                <Link to="/services" className="text-secondary-foreground/80 hover:text-primary transition-colors">
                   Services
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={() => scrollToSection("case-studies")} className="text-secondary-foreground/80 hover:text-primary transition-colors">
+                <Link to="/case-studies" className="text-secondary-foreground/80 hover:text-primary transition-colors">
                   Case Studies
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={() => scrollToSection("contact")} className="text-secondary-foreground/80 hover:text-primary transition-colors">
+                <Link to="/contact" className="text-secondary-foreground/80 hover:text-primary transition-colors">
                   Contact
-                </button>
+                </Link>
               </li>
             </ul>
           </div>

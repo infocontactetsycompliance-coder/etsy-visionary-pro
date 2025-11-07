@@ -123,7 +123,7 @@ const Contact = () => {
             {/* Contact Methods */}
             <div className="space-y-4">
               <a
-                href="mailto:ethan@ethanmartinconsulting.com"
+                href="mailto:etsyoptimizerethanmatin@gmail.com"
                 className="flex items-center gap-4 p-4 bg-accent rounded-lg hover:bg-primary/10 transition-colors group"
               >
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20">
@@ -131,7 +131,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="font-medium text-foreground">Email</div>
-                  <div className="text-sm text-muted-foreground">ethan@ethanmartinconsulting.com</div>
+                  <div className="text-sm text-muted-foreground">etsyoptimizerethanmatin@gmail.com</div>
                 </div>
               </a>
 

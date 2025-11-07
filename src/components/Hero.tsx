@@ -1,13 +1,8 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp } from "lucide-react";
 
 const Hero = () => {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-hero overflow-hidden">
@@ -36,19 +31,23 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             <Button 
               size="lg" 
-              onClick={() => scrollToSection("contact")}
+              asChild
               className="bg-primary hover:bg-primary-hover text-primary-foreground px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all"
             >
-              Book Your Free Audit
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <Link to="/contact">
+                Book Your Free Audit
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
             </Button>
             <Button 
               size="lg" 
               variant="outline"
-              onClick={() => scrollToSection("case-studies")}
+              asChild
               className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-6 text-lg"
             >
-              See Case Studies
+              <Link to="/case-studies">
+                See Case Studies
+              </Link>
             </Button>
           </div>
 
