@@ -17,13 +17,38 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Request Received!",
-      description: "I'll review your shop and get back to you within 24 hours.",
-    });
-    setFormData({ name: "", email: "", shopUrl: "", salesRange: "", message: "" });
+    
+    try {
+      const response = await fetch("https://formspree.io/f/xzzypjlk", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Request Received!",
+          description: "I'll review your shop and get back to you within 24 hours.",
+        });
+        setFormData({ name: "", email: "", shopUrl: "", salesRange: "", message: "" });
+      } else {
+        toast({
+          title: "Error",
+          description: "Something went wrong. Please try again.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
