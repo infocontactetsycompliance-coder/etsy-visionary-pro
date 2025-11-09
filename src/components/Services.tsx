@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Search, TrendingUp, FileText, Package, Rocket, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const services = [
@@ -82,11 +83,13 @@ const Services = () => {
                   </ul>
                   <Button
                     variant="outline"
-                    onClick={scrollToContact}
+                    asChild
                     className="w-full group border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                   >
-                    Learn More
-                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    <Link to="/contact">
+                      Learn More
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -98,11 +101,13 @@ const Services = () => {
         <div className="text-center mt-12">
           <Button
             size="lg"
-            onClick={scrollToContact}
+            asChild
             className="bg-primary hover:bg-primary-hover text-primary-foreground px-8"
           >
-            Book Your Free Shop Audit
-            <ArrowRight className="ml-2 w-5 h-5" />
+            <Link to="/contact">
+              Book Your Free Shop Audit
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
           </Button>
         </div>
       </div>

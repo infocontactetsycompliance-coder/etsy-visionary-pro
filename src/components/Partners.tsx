@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { ShoppingBag, Package, BarChart3, Search, TrendingUp, Megaphone } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Partners = () => {
   const partners = [
@@ -78,12 +79,12 @@ const Partners = () => {
           <p className="text-muted-foreground mb-6">
             I'm always looking to partner with innovative eCommerce and Etsy-focused platforms.
           </p>
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="inline-block bg-primary hover:bg-primary-hover text-primary-foreground px-6 py-3 rounded-lg font-medium transition-colors"
           >
             Become a Partner
-          </a>
+          </Link>
         </div>
       </div>
     </section>

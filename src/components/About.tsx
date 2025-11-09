@@ -25,7 +25,7 @@ const About = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <img
                 src={ethanPhoto}
-                alt="Ethan Martin - Etsy Optimization Specialist"
+                alt="Ethan Matin - Etsy Optimization Specialist"
                 className="w-full h-auto object-cover"
               />
             </div>
@@ -40,7 +40,7 @@ const About = () => {
           <div className="space-y-6">
             <div>
               <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-                Meet Ethan Martin
+                Meet Ethan Matin
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 As a certified <strong>Etsy Visibility & Optimization Specialist</strong>, I've spent years helping creative entrepreneurs and Etsy shop owners scale their businesses through proven, data-driven strategies.

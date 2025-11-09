@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <h3 className="text-xl font-bold mb-4">Ethan Martin Consulting</h3>
+            <h3 className="text-xl font-bold mb-4">Ethan Matin Consulting</h3>
             <p className="text-secondary-foreground/80 mb-4">
               Helping Etsy sellers increase visibility, traffic, and sales through proven optimization strategies.
             </p>
@@ -95,10 +95,10 @@ const Footer = () => {
         <div className="border-t border-secondary-foreground/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-secondary-foreground/60">
-              Copyright © 2025 Ethan Martin Consulting | All Rights Reserved
+              Copyright © 2025 Ethan Matin Consulting | All Rights Reserved
             </p>
             <p className="text-xs text-secondary-foreground/60 text-center md:text-right max-w-2xl">
-              Ethan Martin Consulting is an independent Etsy optimization consultancy helping sellers grow through ethical visibility and SEO practices. Not directly affiliated with Etsy Inc.
+              Ethan Matin Consulting is an independent Etsy optimization consultancy helping sellers grow through ethical visibility and SEO practices. Not directly affiliated with Etsy Inc.
             </p>
           </div>
         </div>
