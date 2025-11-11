@@ -1,5 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { TrendingUp, Users, DollarSign } from "lucide-react";
+import proofStats1 from "@/assets/proof-stats-1.jpg";
+import proofStats2 from "@/assets/proof-stats-2.jpg";
+import proofVideo from "@/assets/proof-video.mp4";
 
 const CaseStudies = () => {
   const cases = [
@@ -95,6 +98,55 @@ const CaseStudies = () => {
               </div>
             </Card>
           ))}
+        </div>
+
+        {/* Sales Proof Section */}
+        <div className="mt-16 space-y-6">
+          <div className="text-center space-y-2">
+            <h3 className="text-2xl sm:text-3xl font-bold text-foreground">
+              Real Store Sales Proof
+            </h3>
+            <p className="text-muted-foreground">
+              Verified Etsy shop statistics showing actual results
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Stats Images */}
+            <Card className="border-border overflow-hidden hover:shadow-lg transition-shadow">
+              <CardContent className="p-0">
+                <img 
+                  src={proofStats1} 
+                  alt="Etsy shop statistics showing 18.9K visits, 372 orders, and $5,831.13 revenue"
+                  className="w-full h-auto"
+                />
+              </CardContent>
+            </Card>
+
+            <Card className="border-border overflow-hidden hover:shadow-lg transition-shadow">
+              <CardContent className="p-0">
+                <img 
+                  src={proofStats2} 
+                  alt="Etsy shop statistics showing 4,595 visits, 97 orders, and $1,471 revenue"
+                  className="w-full h-auto"
+                />
+              </CardContent>
+            </Card>
+
+            {/* Video Proof */}
+            <Card className="border-border overflow-hidden hover:shadow-lg transition-shadow md:col-span-2">
+              <CardContent className="p-0">
+                <video 
+                  controls 
+                  className="w-full h-auto max-h-[600px]"
+                  preload="metadata"
+                >
+                  <source src={proofVideo} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </div>
     </section>
